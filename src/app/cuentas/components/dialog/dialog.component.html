@@ -1,0 +1,53 @@
+<div class="container" [formGroup]="formulario">
+  <div class="row">
+    <div class="col-6">Bankapp</div>
+    <div class="col-6 d-flex justify-content-end">
+      Agregar Tarjeta
+    </div>
+  </div>
+
+  <mat-form-field class="w-100">
+    <mat-label>Número de tarjeta</mat-label>
+    <input matInput placeholder="Numero de tarjeta" formControlName="nombre">
+  </mat-form-field>
+
+  <mat-form-field class="w-50 pad-r">
+    <mat-label>Cuenta</mat-label>
+    <input matInput placeholder="Cuenta" formControlName="cuenta">
+  </mat-form-field>
+
+  <mat-form-field class="w-50 pad-l">
+    <mat-label>Issuer</mat-label>
+    <input matInput placeholder="Issuer" formControlName="issuer">
+  </mat-form-field>
+
+  <mat-form-field class="w-100">
+    <mat-label>Nombre de tarjeta</mat-label>
+    <input matInput placeholder="Nombre de tarjeta" formControlName="nombreT">
+  </mat-form-field>
+
+  <mat-form-field class="w-100">
+    <mat-label>Marca</mat-label>
+    <input matInput placeholder="Marca" formControlName="marca">
+  </mat-form-field>
+
+  <mat-form-field class="w-100">
+    <mat-label>Estatus</mat-label>
+    <input matInput placeholder="Estatus" formControlName="estatus">
+  </mat-form-field>
+
+  <mat-form-field class="w-100">
+    <mat-label>Saldo</mat-label>
+    <input matInput placeholder="Saldo" formControlName="saldo">
+  </mat-form-field>
+
+  <mat-form-field class="w-100">
+    <mat-label>Tipo de cuenta</mat-label>
+    <input matInput placeholder="Tipo de cuenta" formControlName="tipo">
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions class="centrar">
+  <button mat-button  color="warn" (click)="cancelar()" >CANCELAR</button>&nbsp;
+  <button mat-raised-button class="color-agregar" (click)="aceptar()">AGREGAR TARJETA</button>
+</div>

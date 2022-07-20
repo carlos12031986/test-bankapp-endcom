@@ -6,6 +6,7 @@ import { CuentaService } from '../../services/cuenta.service';
 
 import { TarjetaElement } from '../../interfaces/tarjeta';
 import { Saldo } from '../../interfaces/saldo';
+import { DialogComponent } from '../../components/dialog/dialog.component';
 
 @Component({
   selector: 'app-listado',
@@ -41,6 +42,6 @@ export class ListadoComponent implements OnInit {
   }
 
   agregar(){
-
+    this._dialog.open(DialogComponent,{width:'40%',data:{}})
   }
 }

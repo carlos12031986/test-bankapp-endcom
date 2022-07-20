@@ -1,0 +1,11 @@
+.pad-r{ padding-right: 5px;}
+.pad-l{ padding-left: 5px;}
+
+.centrar{
+  justify-content: center;
+}
+
+.color-agregar{
+  background-color:#08bc94 ;
+  color:white;
+}
