@@ -1,0 +1,22 @@
+
+<mat-toolbar class="contenedor">
+
+  <div class="img">
+    <img src="./assets/img_1.JPG" style="margin-left: 0px">
+  </div>
+
+  <span class="spacer"></span>
+
+  <div class="button-row">
+    <button mat-button color="primary" class="button-menu" (click)="go(1)">MIS CUENTAS</button>
+    <button mat-button color="primary" class="button-menu" (click)="go(2)">ENVIAR DINERO</button>
+  </div>
+
+  <span class="spacer"></span>
+
+  <div class="sesion-info" >
+    <ins class="usuario">{{usuario | async}}</ins>
+    <span class="sesion">{{ultimaSesion | async}}</span>
+  </div>
+
+</mat-toolbar>

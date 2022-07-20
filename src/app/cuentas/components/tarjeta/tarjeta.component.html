@@ -1,0 +1,26 @@
+
+<mat-card  [ngStyle]="{'background-color': getColor(tarjeta.id)}">
+  <mat-card-content class="card-content">
+    <div class="row">
+      <div class="col-6"><span>{{ tarjeta.estado }}</span></div>
+      <div class="col-6 d-flex justify-content-end">
+        <span>{{tarjeta.saldo | currency:"MXN":"symbol"}}</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <strong>{{ tarjeta.tarjeta }}</strong>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <span>{{tarjeta.nombre}}</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <span>Titular</span>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

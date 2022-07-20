@@ -1,0 +1,75 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-12 contenedor-tarjetas">
+
+      <div class="tarjeta-top">
+        <div class="row contenedor-row">
+          <div class="col-5 label" >
+            SALDO GENERAL EN CUENTAS
+          </div>
+          <div class="col-7 monto">
+            {{saldoGeneral| async | currency:"MXN":"symbol"}}
+          </div>
+        </div>
+      </div>
+
+      <div class="tarjeta-top">
+        <div class="row contenedor-row">
+          <div class="col-5 label" >
+            TOTAL DE INGRESOS
+          </div>
+          <div class="col-7 monto-gris">
+            {{ingresos | async | currency:"MXN":"symbol"}}
+          </div>
+        </div>
+      </div>
+
+      <div class="tarjeta-top">
+        <div class="row contenedor-row">
+          <div class="col-4 label" >
+            TOTAL DE GASTOS
+          </div>
+          <div class="col-8 monto-gris">
+            {{ gastos | async | currency:"MXN":"symbol"}}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row contenedor-lateral" >
+
+    <div class="col-lg-3 col-xl-3 tarjetas-lateral" >
+
+      <div class="titulo">
+        <span>MIS CUENTAS</span>
+      </div>
+
+      <div  *ngFor="let item of tarjetas; let i = index" class="tarjeta">
+        <app-tarjeta [tarjeta]="item"></app-tarjeta>
+      </div>
+
+      <div class="contenido-boton">
+         <button mat-stroked-button  class="boton-agregar"
+         (click)="agregar()"
+         >AGREGAR
+         <mat-icon >
+            add
+         </mat-icon>
+        </button>
+      </div>
+
+    </div>
+
+    <div class="col-lg-9 col-xl-9 contenido-tabla">
+      <div class="titulo">
+       <span> MOVIMIENTOS</span>
+      </div>
+      <app-tabla></app-tabla>
+    </div>
+
+  </div>
+
+</div>
