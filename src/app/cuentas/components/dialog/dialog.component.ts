@@ -30,6 +30,15 @@ export class DialogComponent implements OnInit {
 
   cancelar = () => {this._dialogRef.close(false);}
 
-  aceptar = () => {this._dialogRef.close(true);}
+  aceptar = () => {
+    if(!this.formulario.valid)
+    {
+      this.formulario.markAllAsTouched();
+      return;
+    }
+
+    window.alert(JSON.stringify(this.formulario.value))
+
+  }
 
 }
